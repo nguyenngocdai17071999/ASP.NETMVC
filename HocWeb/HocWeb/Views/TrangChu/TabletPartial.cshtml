@@ -1,0 +1,33 @@
+﻿@using Models.Framwork;
+@model List<Product>
+
+<h1 class="my-2" align="left">Tablet</h1>
+<div class="row">
+    @{
+        foreach (var item in Model)
+        {
+        <div class="col-md-3 col-sm-6">
+            <div class="single-shop-product">
+                <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })"><img class="card-img-top" src="@item.Image" alt="Image"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        @if (item.Name.Length < 30)
+                        {
+                            <a href="@Url.Action("XemChiTiet", "ChiTiet", new { @productID = item.ID })">@item.Name</a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("XemChiTiet", "ChiTiet", new { @productID = item.ID })">@item.Name.Substring(0, 30)...</a>
+                        }
+                    </h4>
+                    <h5>@item.Price</h5>
+                    <p class="card-text">@item.MetaDescriptions.Substring(0, 40)...</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+        }
+    }
+</div>

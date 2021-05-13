@@ -1,0 +1,499 @@
+﻿@model PagedList.IPagedList<Models.Framwork.Product>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+      List<Models.Framwork.Product> products = null;
+}
+@section header{
+
+}
+@section jsFooter{
+
+    <script src="~/Assets/Admin/js/controller/productcontroller.js"></script>
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/Product/Create"> Thêm mới </a>
+    </div>
+    <br />
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Điện thoại</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">TABLET</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="dangchuyen-tab" data-toggle="tab" href="#dangchuyen" role="tab" aria-controls="dangchuyen" aria-selected="false">LAPTOP</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="dachuyen-tab" data-toggle="tab" href="#dachuyen" role="tab" aria-controls="dachuyen" aria-selected="false">Phụ kiện</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="dahuy-tab" data-toggle="tab" href="#dahuy" role="tab" aria-controls="dahuy" aria-selected="false">Đồng hồ</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            @*<br />
+                <h6>@Model.Count Sản phẩm </h6>
+                <br />*@
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Data/images/images.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr id="row_@item.ID">
+                                            <td>@item.Name</td>
+                                            <td>@item.Code</td>
+                                            <td>@item.Brand.Name</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ID">@Html.Raw(item.Status ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ID">Sửa</a>
+
+                                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                                           {
+                                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                                               OnComplete = "$('row_" + @item.ID + "').remove()",
+                                               OnSuccess = "window.location.reload()",
+                                               HttpMethod = "Delete"
+                                           }, new { @class = "btn btn-danger" })
+                                                <a class="btn btn-primary" href="/Admin/Product/Detail/@item.ID">Details</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                            <br /><br />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="choxacnhan" role="tabpanel" aria-labelledby="choxacnhan-tab">
+            @{
+                products = new List<Models.Framwork.Product>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == 1)
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Data/images/images.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ID">
+                                            <td>@item.Name</td>
+                                            <td>@item.Code</td>
+                                            <td>@item.Brand.Name</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ID">@Html.Raw(item.Status ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ID">Sửa</a>
+
+                                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                                           {
+                                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                                               OnComplete = "$('row_" + @item.ID + "').remove()",
+                                               OnSuccess = "window.location.reload()",
+                                               HttpMethod = "Delete"
+                                           }, new { @class = "btn btn-danger" })
+                                                <a class="btn btn-primary" href="/Admin/Product/Detail/@item.ID">Details</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="layhang" role="tabpanel" aria-labelledby="layhang-tab">
+            @{
+                products = new List<Models.Framwork.Product>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == 2)
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Data/images/images.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ID">
+                                            <td>@item.Name</td>
+                                            <td>@item.Code</td>
+                                            <td>@item.Brand.Name</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ID">@Html.Raw(item.Status ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ID">Sửa</a>
+
+                                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                                           {
+                                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                                               OnComplete = "$('row_" + @item.ID + "').remove()",
+                                               OnSuccess = "window.location.reload()",
+                                               HttpMethod = "Delete"
+                                           }, new { @class = "btn btn-danger" })
+                                                <a class="btn btn-primary" href="/Admin/Product/Detail/@item.ID">Details</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="dangchuyen" role="tabpanel" aria-labelledby="dangchuyen-tab">
+            @{
+                products = new List<Models.Framwork.Product>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == 41)
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Data/images/images.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ID">
+                                            <td>@item.Name</td>
+                                            <td>@item.Code</td>
+                                            <td>@item.Brand.Name</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ID">@Html.Raw(item.Status ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ID">Sửa</a>
+
+                                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                                           {
+                                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                                               OnComplete = "$('row_" + @item.ID + "').remove()",
+                                               OnSuccess = "window.location.reload()",
+                                               HttpMethod = "Delete"
+                                           }, new { @class = "btn btn-danger" })
+                                                <a class="btn btn-primary" href="/Admin/Product/Detail/@item.ID">Details</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="dachuyen" role="tabpanel" aria-labelledby="dachuyen-tab">
+            @{
+                products = new List<Models.Framwork.Product>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == 43)
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Data/images/images.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ID">
+                                            <td>@item.Name</td>
+                                            <td>@item.Code</td>
+                                            <td>@item.Brand.Name</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ID">@Html.Raw(item.Status ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ID">Sửa</a>
+
+                                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                                           {
+                                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                                               OnComplete = "$('row_" + @item.ID + "').remove()",
+                                               OnSuccess = "window.location.reload()",
+                                               HttpMethod = "Delete"
+                                           }, new { @class = "btn btn-danger" })
+                                                <a class="btn btn-primary" href="/Admin/Product/Detail/@item.ID">Details</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="dahuy" role="tabpanel" aria-labelledby="dahuy-tab">
+            @{
+                products = new List<Models.Framwork.Product>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == 44)
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Mã sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Data/images/images.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ID">
+                                            <td>@item.Name</td>
+                                            <td>@item.Code</td>
+                                            <td>@item.Brand.Name</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ID">@Html.Raw(item.Status ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ID">Sửa</a>
+
+                                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                                           {
+                                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                                               OnComplete = "$('row_" + @item.ID + "').remove()",
+                                               OnSuccess = "window.location.reload()",
+                                               HttpMethod = "Delete"
+                                           }, new { @class = "btn btn-danger" })
+                                                <a class="btn btn-primary" href="/Admin/Product/Detail/@item.ID">Details</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+       
+

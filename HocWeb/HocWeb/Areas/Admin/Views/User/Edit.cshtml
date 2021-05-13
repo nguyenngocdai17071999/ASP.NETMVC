@@ -1,0 +1,79 @@
+﻿@model Models.Framwork.User
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+@section header{
+
+}
+@section jsFooter{
+    <script>
+
+        $('#btnSelectImage').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImage').val(url);
+            };
+            finder.popup();
+        })
+
+    </script>
+}
+@using (Html.BeginForm("Edit", "User", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="container-fluid">
+        <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin người dùng</h1>
+        <hr />
+        @Html.HiddenFor(model => model.UserID)
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>  FirstName</p>
+                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
+            </div>
+            <div class="col-sm-3 ">
+                <p>  LastName</p>
+                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control form-control-user" })
+            </div>
+        </div>       
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>  Address</p>
+                @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3">
+                <p>  Email</p>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>  Phone</p>
+                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3">
+                <p>  Identity card number</p>
+                @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>  Chức vụ</p>
+                @Html.DropDownListFor(model => model.Position, new[] { new SelectListItem { Text = "Người dùng", Value = "1" }, new SelectListItem { Text = "Quản lí", Value = "2" } }, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3">
+                <p>Hình đại diện</p>
+                @Html.EditorFor(model => model.Avatar, new { htmlAttributes = new { @class = "form-control", @id = "txtImage" }, id = "txtImage" })
+                <hr />
+                <a class="btn btn-primary" style="color:black" id="btnSelectImage">Chọn ảnh</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,8 @@
+﻿@using HocWeb.Models;
+@model List<CartItem>
+
+<div class="col-sm-6">
+    <div class="shopping-item">
+        <a href="@Url.Action("Index","GioHang")">Giỏ hàng: <span class="cart-amunt">@Model.Sum(x=>x.Quantity)</span> <i class="fa fa-shopping-cart"></i></a>
+    </div>
+</div>

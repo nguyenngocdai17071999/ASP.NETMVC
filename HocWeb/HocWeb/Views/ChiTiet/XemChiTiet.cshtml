@@ -1,0 +1,13 @@
+﻿@using Models.Framwork;
+@model Product
+
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Layout/ChiTietLayout.cshtml";
+}
+
+@Html.Action("HienChiTietSanPhamPartial", "ChiTiet", new { @proID = Model.ID })
+
+@Html.Action("Relative", "ChiTiet", new { @cateID = Model.CategoryID })
+
+@Html.Action("RelativeBrand", "ChiTiet", new { @brandID = Model.BrandID })

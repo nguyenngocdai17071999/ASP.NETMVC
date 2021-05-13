@@ -1,0 +1,163 @@
+﻿@model Models.Framwork.Product
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+
+@section header{
+
+}
+
+    <div class="container-fluid">
+        <h1 class="m-0 font-weight-bold text-primary">Chi tiết sản phẩm</h1>
+        <hr />
+
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <dl class="dl-horizontal" style="font-size: 24px">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Brand.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Brand.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ProductCategory.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ProductCategory.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Code)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Code)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MetaTitle)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MetaTitle)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Description)
+                    </dd>
+
+                    
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Price)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PromotionPrice)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.PromotionPrice)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Quantity)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Quantity)
+                    </dd>
+
+                </dl>
+            </div>
+
+            <div class="col-sm-3">
+                <dl class="dl-horizontal" style="font-size: 24px">
+
+
+                  
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Warranty)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Warranty)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CreatedDate)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CreatedDate)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CreatedBy)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CreatedBy)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ModifiedDate)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ModifiedDate)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ModifiedBy)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ModifiedBy)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MetaKeywords)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MetaKeywords)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MetaDescriptions)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MetaDescriptions)
+                    </dd>
+
+                    <dt>
+                  
+
+                </dl>
+            </div>
+        </div>
+    </div>
+       

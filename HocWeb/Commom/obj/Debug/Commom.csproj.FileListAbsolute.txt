@@ -1,0 +1,40 @@
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csprojAssemblyReference.cache
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csproj.CoreCompileInputs.cache
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csproj.CoreCompileInputs.cache
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.pdb
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.pdb
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csprojAssemblyReference.cache
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.pdb
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\bin\Debug\Commom.pdb
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csprojAssemblyReference.cache
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.csproj.CoreCompileInputs.cache
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Commom\obj\Debug\Commom.pdb

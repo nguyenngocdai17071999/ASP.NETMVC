@@ -1,0 +1,60 @@
+﻿@using Models.Framwork;
+@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<Product>
+
+@{
+    ViewBag.Title = "SanPhamTheoHang";
+    Layout = "~/Views/Layout/ChiTietLayout.cshtml";
+}
+
+@if (Model.Count == 0)
+{
+    <h1>Không có sản phẩm nào</h1>
+}
+<h1>Có @Model.TotalItemCount sản phẩm</h1>
+
+<div class="single-product-area">
+<div class="zigzag-bottom"></div>
+<div class="container">
+    <div class="row">
+        <div class="section group">
+                @{
+                    foreach (var item in Model)
+                    {
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-shop-product">
+                                <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })"> <img class="card-img-top" height="160" width="120" src="@item.Image" alt="Image" \></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        @if (item.Name.Length < 30)
+                                        {
+                                            <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name.Substring(0, 30)...</a>
+                                        }
+                                    </h4>
+                                    <h5>@item.Price</h5>
+                                    <p class="card-text">@item.MetaDescriptions.Substring(0, 30)...</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+                }
+            </div>
+            <br />
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("DoanhMucSP",
+                 new { page, @proCate = Model[0].CategoryID }))
+        </div>
+    </div>
+    </div>
+

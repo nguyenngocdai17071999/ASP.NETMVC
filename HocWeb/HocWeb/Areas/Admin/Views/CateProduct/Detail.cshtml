@@ -1,0 +1,115 @@
+﻿@model Models.Framwork.ProductCategory
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+
+@section header{
+
+}
+
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chi tiết danh mục sản phẩm</h1>
+    <hr />
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <dl class="dl-horizontal" style="font-size: 24px">
+               
+                <dt>
+                    Tên danh mục
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    Tiêu đề danh mục
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaTitle)
+                </dd>
+
+                <dt>
+                    Thứ tự xuất hiện
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DisplayOrder)
+                </dd>
+                <dt>
+                    Keywords
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaKeywords)
+                </dd>
+
+                <dt>
+                    Mô tả
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaDescriptions)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-3">
+            <dl class="dl-horizontal" style="font-size: 24px">
+                <dt>
+                    Ngày tạo danh mục
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedDate)
+                </dd>
+
+                <dt>
+                    Tài khoản tạo danh mục
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedBy)
+                </dd>
+
+                <dt>
+                    Ngày sửa danh mục
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+                <dt>
+                    Tài khoản sửa danh mục
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedBy)
+                </dd>
+                <dt>
+                    Trạng thái
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+                <dt>
+                    Hiển thị
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ShowOnHome)
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <a href="/admin/cateproduct/index" class="btn btn-primary" style="width:100px;">Trở về</a>
+    </div>
+</div>

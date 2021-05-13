@@ -1,0 +1,18 @@
+﻿@using Models.Framwork;
+@model Content
+
+@{
+    ViewBag.Title = "XemChiTiet_tintuc";
+    Layout = "~/Views/Layout/DungChung.cshtml";
+}
+
+@section header{
+
+}
+
+<div class="site-section">
+    @Html.Action("ChiTietTinTucPartial", "ChiTiet", new { @proID = Model.ID })
+
+    @Html.Action("RelativeTinTucPartial", "ChiTiet")
+
+    </div>

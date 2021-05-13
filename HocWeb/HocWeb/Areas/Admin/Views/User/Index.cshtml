@@ -1,0 +1,85 @@
+﻿@model PagedList.IPagedList<Models.Framwork.User>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Quản lí người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+@section header{
+
+}
+@section jsFooter{
+    <script src="~/Assets/Admin/js/controller/userController.js"></script>
+
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách người dùng</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/User/Create" style="width:100px;"> Thêm mới </a>
+    </div>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+
+                                <th>UserName</th>
+                                <th>Name</th>
+                                <th>Ảnh</th>
+                                <th>Chức vụ</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>UserName</th>
+                                <th>Name</th>
+                                <th>Ảnh</th>
+                                <th>Chức vụ</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @if (Model.Count>0)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr id="row_@item">
+                                        <td>@item.UserName</td>
+                                        <td>@item.FirstName @item.LastName</td>
+                                        <td align="center">
+                                            <img src="@item.Avatar" alt="Ảnh đại diện   " width="50px" height="50px" />
+                                        </td>
+                                        <td>@(item.Position == "1" ? "User" : "Admin")</td>
+                                        <td>@item.Email </td>
+                                        <td><a href="#" class="btn-active" data-id="@item.UserID">@(item.Status ? "Đang hoạt động" : "Đang khóa")</a></td>
+                                        <td>
+                                            <a class="btn btn-success" href="/Admin/User/Edit/@item.UserID">Edit</a>
+                                            
+                                            @Ajax.ActionLink("Xóa", "Delete", new { @id = item.UserID }, new AjaxOptions
+                                       {
+                                           Confirm = "Bạn có muốn xóa người dùng này",
+                                           OnComplete = "$('#row_" + @item.UserID + "').remote()",
+                                           OnSuccess = "window.location.reload()",
+                                           HttpMethod = "Delete"
+                                       },new {@class="btn btn-danger" })
+                                            
+                                            <a class="btn btn-primary"  href="/Admin/User/Detail/@item.UserID">Details</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

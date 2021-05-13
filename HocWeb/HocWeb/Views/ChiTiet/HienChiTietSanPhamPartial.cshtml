@@ -1,0 +1,77 @@
+﻿@using Models.Framwork;
+@model Product
+
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="product-images">
+            <div class="zoom">
+                <div class="small">
+                    <img id="img1" src="@Model.Image" alt="">
+                </div>
+                <div class="large">
+                    <img id="img1" src="@Model.Image" alt="">
+                </div>
+            </div>
+
+            <div class="product-gallery">
+             
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="product-inner">
+            <h2 class="product-name">@Model.Name</h2>
+            <div class="product-inner-price">
+                <ins>@Model.Price</ins> <del>@Model.Price</del>
+            </div>
+
+            <form action="" class="cart">
+                <div class="quantity">
+                </div>
+                <a href="@Url.Action("AddItem","GioHang", new { @productID=Model.ID , @quantity=1 })" class="add_to_cart_button">Add to cart</a>
+            </form>
+
+            <div class="product-inner-category">
+                <p>Category: <a href="">@Model.MetaTitle</a>
+            </div>
+
+
+            <div role="" class="" id="home">
+                <h2>Mô tả Sản phẩm</h2>
+                <p>@Model.Description</p>
+            </div>
+            <br>
+            <br>
+            <a href="@Url.Action("index","ThongTinShop")" class="add_to_cart_button">Gửi phản hồi</a>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 single-content">
+            <p class="mb-5">
+             
+            </p>
+            <h1 class="mb-4">
+                @Model.MetaTitle
+                <br>
+            </h1>
+            <br>
+            <div class="post-meta d-flex mb-5">
+                <div class="vcard">
+                </div>
+            </div>
+
+        </div>
+        @Html.Raw(Model.Detail)
+    </div>
+    <div class="col-md-6">
+        <a href="@Url.Action("Index","ThongTinShop")"></a>
+    </div>
+</div>

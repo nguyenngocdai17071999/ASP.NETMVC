@@ -1,0 +1,18 @@
+﻿@using Models.Framwork
+@model  List<Content>
+
+
+<div class="related-products-wrapper">
+    <h2 class="related-products-title">Tin Liên Quan</h2>
+    <div class="related-products-carousel">
+        @foreach (var item in Model)
+        {
+            <div class="">
+                <div >
+                    <img src="@item.Image" alt="Image" width="100" height="200">
+                </div>
+                <h2><a href="@Url.Action("XemChiTiet_tintuc","ChiTiet", new { @contentID = item.ID })">@item.Name</a></h2>
+            </div>
+        }
+    </div>
+</div>

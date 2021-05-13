@@ -1,0 +1,25 @@
+﻿@using Models.Framwork
+@model  List<Product>
+
+    <div class="related-products-wrapper">
+        <h2 class="related-products-title">Sản Phẩm Cùng Hãng</h2>
+        <div class="related-products-carousel">
+            @foreach (var item in Model)
+            {
+                <div class="single-product">
+                    <div class="product-f-image">
+                        <img src="@item.Image" alt="Image" width="130" height="200">
+                        <div class="product-hover">
+                            <a href="@Url.Action("AddItem","GioHang", new { @productID=item.ID , @quantity=1 })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                        </div>
+                    </div>
+                    <h2><a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name</a></h2>
+                    <div class="product-carousel-price">
+                        <ins>@item.Price</ins> <del>@item.Price</del>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+

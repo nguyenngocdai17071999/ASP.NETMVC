@@ -1,0 +1,43 @@
+﻿@using Models.ViewModel;
+@model List<ProductViewModel>
+
+<div class="col-md-4">
+    <br>
+    <br>
+    <h2 class="add_to_cart_button" >Sản phẩm đã mua</h2>
+    @if (@Model.Count > 0)
+    {
+        <table cellspacing="0" class="shop_table cart">
+            <thead>
+                <tr>
+                    <th class="product-name">ID</th>
+                    <th class="product-thumbnail">Hình ảnh</th>
+                    <th class="product-name">Tên sản phẩm</th>
+                    <th class="product-price">Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="cart_item">
+                        <td class="product-name">
+                            <a title="ID product" class="remove" href="">@item.ID</a>
+                        </td>
+
+                        <td class="product-thumbnail">
+                            <a href="#"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@item.Images"></a>
+                        </td>
+
+                        <td class="product-name">
+                            <a title="product image" href="single-product.html">@item.Name</a>
+                        </td>
+
+                        <td class="product-price">
+                            <span class="amount">@item.Price</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    </div>

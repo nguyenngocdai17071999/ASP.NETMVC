@@ -1,0 +1,39 @@
+﻿@using Models.Framwork;
+@model  List<Product>
+
+<div class="single-sidebar">
+    <h2 class="sidebar-title">Sale Products</h2>
+    @foreach (var item in Model)
+    {
+        <div class="thubmnail-recent">
+            <img src="@item.Image" class="recent-thumb" alt="">
+            <h2><a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name</a></h2>
+            <div class="product-sidebar-price">
+                <ins>@item.Price</ins> <del>@item.Price</del>
+            </div>
+        
+        </div>
+    }
+</div>
+    @*<div class="thubmnail-recent">
+        <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+        <h2><a href="">Sony Smart</a></h2>
+        <div class="product-sidebar-price">
+            <ins>$700.00</ins> <del>$100.00</del>
+        </div>
+    </div>
+    <div class="thubmnail-recent">
+        <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+        <h2><a href="">Sony Smart</a></h2>
+        <div class="product-sidebar-price">
+            <ins>$700.00</ins> <del>$100.00</del>
+        </div>
+    </div>
+    <div class="thubmnail-recent">
+        <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+        <h2><a href="">Sony Smart</a></h2>
+        <div class="product-sidebar-price">
+            <ins>$700.00</ins> <del>$100.00</del>
+        </div>
+    </div>*@
+

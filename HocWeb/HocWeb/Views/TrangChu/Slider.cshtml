@@ -1,0 +1,97 @@
+﻿@using Models.Framwork;
+@model  List<Content>
+
+<div class="slider-area">
+    <!-- Slider -->
+    <h1 class="col-md-6 col-md-offset-1">Tin hot trong ngày</h1>
+    <div class="block-slider block-slider4">
+        <ul class="" id="bxslider-home4">
+            @foreach (var item in Model)
+            {
+                <li>
+                    @if (item.ID == 1)
+                    {
+                          <img src="~/Assets/client/images/Lider/Untitled3.png" alt="Slide" />
+                    
+                    @*<img src="~/Assets/client/images/Lider/iphone11Promax.jpg" />*@
+                    }
+                    else if(item.ID ==2)
+                    {
+                         <img src="~/Assets/client/images/Lider/Untitled2.png" />
+                    }
+                    else
+                    {
+                        <img src="~/Assets/client/images/Lider/Untitled.png" />
+                    }
+                    <div class="caption-group">
+                        <h2 class="caption title">
+                            @item.Name <span class="primary"> <strong>...</strong></span>
+                        </h2>
+                        <h4 class="caption subtitle">@item.MetaKeywords</h4>
+                        <a class="caption button-radius" href="@Url.Action("XemChiTiet_tintuc","ChiTiet", new {  @contentID = item.ID })"><span class="icon"></span>View more</a>
+                    </div>
+                </li>
+                @*}
+            else if (item.ID == 5)
+            {
+                <li>
+                    <img src="@item.Image" height="500px" width="300px" alt="Slide">
+                    @*<img src="~/Assets/client/images/Lider/Galaxy-Note-10.jpg" />
+                    <div class="caption-group">
+                        <h2 class="caption title">
+                            @item.Name <span class="primary"> <strong>...</strong></span>
+                        </h2>
+                        <h4 class="caption subtitle">@item.Status</h4>
+                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                    </div>
+                </li>
+            }
+            else if (item.ID == 6)
+            {
+                <li>
+                    <img src="@item.Image" height="500px" width="300px" alt="Slide">
+                    @*<img src="~/Assets/client/images/Lider/HuaWeiP20.jpg" />
+                    <div class="caption-group">
+                        <h2 class="caption title">
+                            @item.Name <span class="primary"> <strong>...</strong></span>
+                        </h2>
+                        <h4 class="caption subtitle">@item.Status</h4>
+                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                    </div>
+                </li>
+            }
+            else if (item.ID == 7)
+            {
+                <li>
+                    <img src="@item.Image" height="500px" width="300px" alt="Slide">
+
+                    <img src="~/Assets/client/images/Lider/maxresdefault.jpg" />
+                    <div class="caption-group">
+                        <h2 class="caption title">
+                            @item.Name <span class="primary"> <strong>...</strong></span>
+                        </h2>
+                        <h4 class="caption subtitle">@item.Status</h4>
+                        <a class="caption button-radius" href="#"><span class="icon"></span>Viewmore</a>
+                    </div>
+                </li>
+            }
+            else if (item.ID == 8)
+            {
+                <li>
+                    <img src="@item.Image" height="500px" width="300px" alt="Slide">
+                    @*<img src="~/Assets/client/images/Lider/Screen-Shot-2019-08-05-at-13.31.28.png" />
+                    <div class="caption-group">
+                        <h2 class="caption title">
+                            @item.Name <span class="primary"> <strong>...</strong></span>
+                        </h2>
+                        <h4 class="caption subtitle">@item.Status</h4>
+                        <a class="caption button-radius" href="#"><span class="icon"></span>View more</a>
+                    </div>
+                </li>
+            }*@
+
+            }
+        </ul>
+    </div>
+</div>
+          

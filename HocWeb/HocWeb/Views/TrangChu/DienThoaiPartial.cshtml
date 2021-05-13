@@ -1,0 +1,137 @@
+﻿@using Models.Framwork;
+@model List<Product>
+
+<div class="col-md-4">
+    <h2 class="product-wid-title">ĐIỆN THOẠI</h2>
+    @{
+        foreach (var item in Model)
+        {
+            <div class="single-wid-product">
+                <div class="card h-100">
+                    <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })"><img class="card-img-top" src="@item.Image" height="300px" width="200px" alt="Image"></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            @if (item.Name.Length < 30)
+                            {
+                                <a href="@Url.Action("XemChiTiet", "ChiTiet", new { @productID = item.ID})">@item.Name</a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("XemChiTiet", "ChiTiet", new { @productID = item.ID})">@item.Name.Substring(0, 30)...</a>
+                            }
+                        </h4>
+                        <h5>@item.Price</h5>
+                        <p class="card-text">@item.MetaDescriptions.Substring(0, 40)...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    </div>
+                </div>
+            </div>
+        }
+
+    }
+    <a href="@Url.Action("DoanhMucSP", new { @proCate = 1})">Xem thêm</a>
+</div>
+
+
+@*<div class="row">
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="~/ChiTiet/ChiTiet"><img class="card-img-top" src="~/images/Samsung Galaxy A9.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="~/ChiTiet/ChiTiet">Samsung Galaxy A9</a>
+                    </h4>
+                    <h5>$24.99</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="~/ChiTiet/ChiTiet"><img class="card-img-top" src="~/images/Samsung Galaxy Note 9 512GB Hàn Quốc (Like New).jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="~/ChiTiet/ChiTiet">Samsung Galaxy Note 9 512GB Hàn Quốc (Like New)</a>
+                    </h4>
+                    <h5>$24.99</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="~/ChiTiet/ChiTiet"><img class="card-img-top" src="~/images/Điện Thoại Samsung Galaxy J3 Pro.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="~/ChiTiet/ChiTiet">Điện Thoại Samsung Galaxy J3 Pro</a>
+                    </h4>
+                    <h5>$24.99</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="~/ChiTiet/ChiTiet"><img class="card-img-top" src="~/images/Samsung Galaxy A6.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="~/ChiTiet/ChiTiet">Samsung Galaxy A6</a>
+                    </h4>
+                    <h5>$24.99</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="~/ChiTiet/ChiTiet"><img class="card-img-top" src="~/images/Samsung Galaxy A6.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="~/ChiTiet/ChiTiet">Điện thoại Samsung Galaxy A7</a>
+                    </h4>
+                    <h5>$24.99</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="~/images/Samsung Galaxy A6.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="~/ChiTiet/ChiTiet">Điện thoại Samsung Galaxy A7</a>
+                    </h4>
+                    <h5>$24.99</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+
+    </div>*@
+

@@ -1,0 +1,81 @@
+﻿@model Models.Framwork.Category
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+
+@section header{
+
+}
+
+@using (Html.BeginForm("Edit", "Category", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa danh mục tin tức</h1>
+        <div>
+            <a class="btn btn-primary" href="/Admin/Category/Index" style="width:100px;" > Trở về </a>
+        </div>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>Tên danh mục</p>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control form-control-user", @autofocus = "autofocus" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <p>Tiêu đề danh mục</p>
+                @Html.EditorFor(model => model.MetaTitle, new { htmlAttributes = new { @class = "form-control form-control-user" } })
+                @Html.ValidationMessageFor(model => model.MetaTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>DisplayOrder</p>
+                @Html.EditorFor(model => model.DisplayOrder, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DisplayOrder, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <p>Ngôn ngữ</p>
+                @Html.DropDownListFor(model => model.Language, new[] { new SelectListItem { Text = "Tiếng Việt", Value = "vi" }, new SelectListItem { Text = "Tiếng Anh", Value = "en" } }, new { @class = "form-control form-control-user" })
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>MetaKeywords</p>
+                @Html.EditorFor(model => model.MetaKeywords, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaKeywords, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <p>MetaDescriptions</p>
+                @Html.EditorFor(model => model.MetaDescriptions, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaDescriptions, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p>Status</p>
+                @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3">
+                <p>ShowOnHome</p>
+                @Html.DropDownListFor(model => model.ShowOnHome, new[] { new SelectListItem { Text = "Show", Value = "True" }, new SelectListItem { Text = "None", Value = "False" } }, new { @class = "form-control form-control-user" })
+            </div>
+           
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
+            </div>
+        </div>
+    </div>
+}
+

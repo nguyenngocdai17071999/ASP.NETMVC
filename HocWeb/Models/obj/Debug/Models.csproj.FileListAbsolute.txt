@@ -1,0 +1,155 @@
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\Commom.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\Models\bin\Debug\Commom.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\Commom.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\Commom.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.pdb
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+D:\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll.config
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Models.pdb
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\Commom.pdb
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.xml
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.xml
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\bin\Debug\PagedList.Mvc.xml
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.csproj.CopyComplete
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.dll
+D:\2020\Năm 3\Kỳ 2\Bảo Mật Web\DOANVIPPRO\DoAnWEB\HocWeb\Models\obj\Debug\Models.pdb

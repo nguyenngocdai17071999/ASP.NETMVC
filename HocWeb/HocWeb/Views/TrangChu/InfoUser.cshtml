@@ -1,0 +1,160 @@
+﻿@model Models.Framwork.User
+@{
+    ViewBag.Title = "InfoUser";
+    Layout = "~/Views/Layout/DungChung.cshtml";
+}
+
+
+
+@section header{
+
+}
+
+@section jsFooter{
+    <script>
+
+        $('#btnSelectImage').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImage').val(url);
+            };
+            finder.popup();
+        })
+    </script>
+
+}
+
+
+@using (Html.BeginForm(Html.BeginForm("InfoUser", "TrangChu", FormMethod.Post)))
+{
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>User Profile</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Page title area -->
+    <div class="col-md-offset-2">
+        @Html.Action("OderedPartial", "GioHang", new { @cusID = Model.UserID })
+
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.UserID)
+
+        <div class="container">
+            <br>
+            <br>
+            <div class="row" id="main">
+                <div class="col-md-8 well" id="leftPanel">
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-4">
+                            <div>
+                                @Html.HiddenFor(model => model.Avatar, new { htmlAttributes = new { @class = "form-control", @id = "txtImage" }, id = "txtImage" })
+                                <a id="btnSelectImage">
+                                    <img src="@Html.ValueFor(model => model.Avatar)" alt="Ảnh đại diện   " width="190" height="200" />
+                                </a>
+                                <br />
+                                <br />
+                                <h2 class="col-md-offset-1">@Model.UserName</h2>
+                                <p>
+                                    Ngày tham gia:    @Model.ModifiedDate
+                                    <br>
+                                    Mã người dùng:    @Model.UserID
+                                </p>
+                                <div class="col-md-offset-0">
+                                    <div class="btn-group">
+                                        <a href="/Admin/User/ChangePassword" class="btn btn-primary">
+                                            Đổi mật khẩu
+                                        </a>
+                                        <a href="/TrangChu/Logout" class="btn btn-warning">
+                                            ĐĂNG XUẤT
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 well" id="rightPanel">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form role="form">
+                                <h2>Chỉnh sửa trang cá nhân</h2>
+                                <hr class="colorgraph">
+                                <div class="row">
+                                    <div class="col-sm-6 mb-sm-0">
+                                        <p>Tên</p>
+                                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control form-control-user" })
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <p>Họ</p>
+                                        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control form-control-user" })
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p> Địa chỉ</p>
+                                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>  Số điện thoại</p>
+                                        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 mb-1 mb-sm-0">
+                                        <p>  Địa chỉ Email</p>
+                                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user" })
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <p>  Số chứng minh nhân dân</p>
+                                        @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
+                                    </div>
+                                </div>
+                                <hr class="colorgraph">
+                                <div class="row">
+                                    <div class="col-sm-4"></div>
+                                    <input type="submit" value="Save" class="add_to_cart_button" style="width:300px;" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <input type="submit" value="Save" class="btn btn-primary" style="width:100px;" />
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+

@@ -1,0 +1,30 @@
+﻿@using Models.Framwork;
+@model Content
+
+@section jsFooter{
+    <script src="/assets/client/js/controller/contactController.js"></script>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 single-content">
+
+            <p class="mb-5">
+                <img src="@Model.Image">
+            </p>
+            <h1 class="mb-4">
+                @Model.MetaTitle
+            </h1>
+            <div class="post-meta d-flex mb-5">
+                <div class="vcard">
+                </div>
+            </div>
+
+        </div>
+        @Html.Raw(Model.Detail)
+    </div>
+    <div class="col-md-6">
+        <a href="@Url.Action("Index","ThongTinShop")"></a>
+    </div>
+</div>
+
+

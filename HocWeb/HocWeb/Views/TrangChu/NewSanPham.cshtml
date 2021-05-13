@@ -1,0 +1,99 @@
+﻿@using Models.Framwork;
+@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<Product>
+
+@{
+    ViewBag.Title = "NewSanPham";
+    Layout = "~/Views/Layout/DungChung.cshtml";
+}
+@section header{
+
+}
+
+@if (Model.Count == 0)
+{
+    <h1>Không có sản phẩm nào</h1>
+}
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Sản phẩm mới nhất</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End Page title area -->
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="section group">
+                @{
+                    foreach (var item in Model)
+                    {
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-shop-product">
+                                <div class="product-upper">
+                                    <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })"> <img class="card-img-top" height="300" width="210" src="@item.Image" alt="Image" \></a>
+                                </div>
+                                <h2>
+                                    @if (item.Name.Length < 30)
+                                    {
+                                        <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name.Substring(0, 30)...</a>
+                                    }
+                                </h2>
+                                <div class="product-carousel-price">
+                                    <ins>@item.Price</ins>
+                                </div>
+
+                                <div class="product-option-shop">
+                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="@Url.Action("AddItem","GioHang", new { @productID=item.ID , @quantity=1 })">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*<div class="single-shop-product">
+                                <div class="product-upper">
+                                    <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })"> <img class="card-img-top" height="300" width="210" src="@item.Image" alt="Image" \></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            @if (item.Name.Length < 30)
+                                            {
+                                                <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name</a>
+                                            }
+                                            else
+                                            {
+                                                <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })">@item.Name.Substring(0, 30)...</a>
+                                            }
+                                        </h4>
+                                        <h5>@item.Price</h5>
+                                        <p class="card-text">@item.Description</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    </div>
+                                </div>
+                            </div>*@
+
+                    }
+
+                }
+            </div>
+            <div class="col-md-6 col-md-offset-4">
+                Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+                @Html.PagedListPager(Model, page => Url.Action("NewSanPham",
+                     new { page }))
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+

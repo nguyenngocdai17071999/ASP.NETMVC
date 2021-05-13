@@ -1,0 +1,91 @@
+﻿@model PagedList.IPagedList<Models.Framwork.Content>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+
+@section header{
+
+}
+@section jsFooter{
+
+    <script src="~/Assets/Admin/js/controller/ContentControoler.js"></script>
+
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách tin tức</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/content/create" style="width:100px;">Thêm mới</a>
+    </div>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+
+                                <th>Name</th>
+                                <th>MetaTitle</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Warranty</th>
+                                <th>Status</th>
+                                <th>Language</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+
+                                <th>Name</th>
+                                <th>MetaTitle</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Warranty</th>
+                                <th>Status</th>
+                                <th>Language</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr id="row_@item.ID">
+                                    <td>@item.Name</td>
+                                    <td>@item.MetaTitle</td>
+                                    <td>@item.Description</td>
+                                    <td align="center">
+                                        <img src="@item.Image" alt="@item.Name" width="50px" height="50px" />
+                                    </td>
+                                    <td>@item.Warranty</td>
+                                    <td><a href="#" class="btn-contentactive" data-id="@item.ID">@(item.Status ? "Show" : "None")</a></td>
+
+                                    <td>@(item.Language == "vi" ? "Tiếng Việt" : "Tiếng Anh")</td>
+                                    <td>
+                                        <a class="btn btn-success" href="/Admin/Content/Edit/@item.ID">Edit</a>
+                                        
+                                        @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                                   {
+                                       Confirm = "Bạn có muốn xóa danh mục này",
+                                       OnComplete = "$('#row_" + @item.ID + "').remote()",
+                                       OnSuccess = "window.location.reload()",
+                                       HttpMethod = "Delete"
+                                     
+                               },  new { @class="btn btn-danger"})
+                                                                              
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

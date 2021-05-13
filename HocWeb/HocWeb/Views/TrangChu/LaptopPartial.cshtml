@@ -1,0 +1,36 @@
+﻿@using Models.Framwork;
+@model List<Product>
+
+
+    <div class="col-md-4">
+        <h2 class="product-wid-title">LAPTOP</h2>
+        @{
+            foreach (var item in Model)
+            {
+                <div class="single-wid-product">
+                    <div class="card h-100">
+                        <a href="@Url.Action("XemChiTiet","ChiTiet", new { @productID = item.ID })"><img class="card-img-top" src="@item.Image" height="300px" width="200px" alt="Image"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                @if (item.Name.Length < 30)
+                                {
+                                    <a href="@Url.Action("XemChiTiet", "ChiTiet", new { @productID = item.ID})">@item.Name</a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("XemChiTiet", "ChiTiet", new { @productID = item.ID})">@item.Name.Substring(0, 30)...</a>
+                                }
+                            </h4>
+                            <h5>@item.Price</h5>
+                            <p class="card-text">@item.MetaDescriptions.Substring(0, 40)...</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        }
+        <a href="@Url.Action("DoanhMucSP", new { @proCate = 2})">Xem thêm</a>
+    </div>

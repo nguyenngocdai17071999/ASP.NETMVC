@@ -1,0 +1,72 @@
+﻿@model PagedList.IPagedList<Models.Framwork.Category>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Quản lí danh mục tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+@section header{
+
+}
+@section jsFooter{
+
+    <script src="~/Assets/Admin/js/controller/CategoryController.js"></script>
+
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách danh mục tin tức</h1>
+    <div>
+        <a  class="btn btn-primary" href="/Admin/Category/Create"> Thêm mới </a>
+    </div>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+
+                                <th>Name</th>
+                                <th>MetaTitle</th>                    
+                                <th>Status</th>
+                                <th>ShowOnHome</th>
+                                <th>Language</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+
+                                <th>Name</th>
+                                <th>MetaTitle</th>                 
+                                <th>Status</th>
+                                <th>ShowOnHome</th>
+                                <th>Language</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr id="row_@item.ID">
+                                <td>@item.Name</td>
+                                <td>@item.MetaTitle</td>
+                             
+                                <td><a href="#" class="btn-active" data-id="@item.ID">@(item.Status ? "Đang hoạt động" : "Đang khóa")</a></td>
+                                <td><a href="#" class="btn-active1" data-id="@item.ID">@(item.ShowOnHome ? "Show" : "None")</td>
+                                <td>@(item.Language == "vi" ? "Tiếng Việt" : "Tiếng Anh")</td>
+                                <td>
+                                    <a class="btn btn-success" href="/Admin/Category/Edit/@item.ID">Sửa</a>
+                                    <a class="btn btn-primary" href="/Admin/Category/Detail/@item.ID">Detail</a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

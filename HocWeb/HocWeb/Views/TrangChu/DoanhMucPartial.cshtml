@@ -1,0 +1,22 @@
+﻿
+@using Models.Framwork;
+@model  List<ProductCategory>
+
+@foreach (var item in Model)
+        {
+          <li> <a href="@Url.Action("DoanhMucSP", new { @proCate = item.ID})" class="active">@item.Name</a></li>
+        }
+
+@*<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li href="@Url.Action("DoanhMucSP", new { @proCate = 1})"class="active"><a href="index.html">Điện Thoại</a></li>
+        <li><a href="@Url.Action("DoanhMucSP", new { @proCate =2})">Laptop</a></li>
+        <li><a href="@Url.Action("DoanhMucSP", new { @proCate = 3})">Phụ kiện</a></li>
+        <li><a href="@Url.Action("DoanhMucSP", new { @proCate = 4})">Thẻ cào</a></li>
+        <li><a href="@Url.Action("DoanhMucSP", new { @proCate = 5 })">Đồng Hồ</a></li>
+        <li><a href="@Url.Action("DoanhMucSP", new { @proCate = 6})">Khuyến mãi</a></li>
+        <li><a href="@Url.Action("DoanhMucSP", new { @proCate = 7})">Xem thêm</a></li>
+
+        <li><a href="cart.html">Giỏ hàng</a></li>
+    </ul>
+</div>*@
